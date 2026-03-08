@@ -1,0 +1,13 @@
+#L'Encapsulation (Protection des données)
+class VoitureDeLuxe:
+    def __init__(self, marque):
+        self.__marque = marque # Attribut "privé"
+
+    @property
+    def marque(self):
+        return self.__marque
+
+    @marque.setter
+    def marque(self, nouvelle_marque):
+        if nouvelle_marque != "":
+            self.__marque = nouvelle_marque
